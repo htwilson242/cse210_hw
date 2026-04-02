@@ -62,8 +62,8 @@ public class Journal
 
         foreach (Entry entry in _entries)
         {
-            if (entry._entrytext.ToLower().Contains(keyword.ToLower()))
-                entry._promptText
+            if (entry._entrytext.ToLower().Contains(keyword.ToLower()) || 
+                entry._promptText.ToLower().Contains(keyword.ToLower()))
             {
                 entry.Display();
                 found = true;
