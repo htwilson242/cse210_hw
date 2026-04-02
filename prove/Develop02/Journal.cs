@@ -31,7 +31,7 @@ public class Journal
         {
             foreach (Entry entry in _entries)
             {
-                writer.WriteLine(entry.ToFileString());
+                outputFile.WriteLine(entry.ToFileString());
             }
         }
     }
