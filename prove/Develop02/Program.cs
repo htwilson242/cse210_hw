@@ -79,7 +79,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("Invalid option. Please try again.");
+                Console.WriteLine("Invalid option");
             }
             
         }
