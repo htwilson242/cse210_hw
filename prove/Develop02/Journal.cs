@@ -24,4 +24,15 @@ public class Journal
             entry.Display();
         }
     }
+
+    public void SaveToFile(string filename)
+    {
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach (Entry entry in _entries)
+            {
+                writer.WriteLine(entry.ToFileString());
+            }
+        }
+    }
 }    
