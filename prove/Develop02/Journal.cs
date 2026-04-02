@@ -6,10 +6,17 @@ public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
 
-    public void Display()
+    public void AddEntry(Entry newEntry)
     {
-        foreach (Entry entry in _entries)
+        _entries.Add(newEntry);
+    }
+    
+    public void DisplayAll()
+    {
+        if (_entries.Count == 0)
         {
-            entry.Display();
+            Console.WriteLine("");
+            return;
         }
     }
+}    
