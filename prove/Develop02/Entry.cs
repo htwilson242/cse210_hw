@@ -14,12 +14,10 @@ public class Entry
         Console.WriteLine();    
     }
 
-
-
-
-
-
-
+    public string ToFileString()
+    {
+        return $"{_date}|{_promptText}|{_entrytext}";
+    }
 }
 
 
