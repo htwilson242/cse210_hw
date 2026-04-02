@@ -35,4 +35,23 @@ public class Journal
             }
         }
     }
-}    
+
+    public void LoadFromFile(string filename)
+    {
+        _entries.Clear();
+
+        string[] lines = File.ReadAllLines(filename);
+
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split('|');
+            if (parts.Length == 3)
+            {
+                Entry entry = new Entry();
+                entry._date = parts[0];
+                entry._promptText = parts[1];
+                entry._entrytext = parts[2];
+                _entries.Add(entry);
+            }
+        }
+    }    
