@@ -18,5 +18,10 @@ public class Journal
             Console.WriteLine("");
             return;
         }
+
+        foreach (Entry entry in _entries)
+        {
+            entry.Display();
+        }
     }
 }    
